@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livrarin</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Livrarin</h1>
+        <img src="#" alt="">
+        <hr>
+    </header>
+    <main>
+        <form method="POST">
+            <h3>Adicione um registro Aqui</h3>
+            
+            <div>
+                    <p>Nome do leitor(a):</p>
+                    <input type="text" name="nome">
+                
+                    <p>Cpf do leitor:</p>
+                    <input type="text" name="cpf">
+                
+                    <p>Telefone do leitor:</p>
+                    <input type="text" name="telefone">
+                
+                    <p>Livro escolhido:</p>
+                    <input type="text" name="livro">
+                
+                    <p>Data de rediramento:</p>
+                    <input type="text" name="retirado">
+                
+                    <p>Data de devolução:</p>
+                    <input type="text" name="devolvido">
+            </div>
+            <br>
+            <button type="submit" name="click" value="Colocar no sistema">Colocar no sistema</button>
+            {% if p%}
+                <p>{{p}}</p>
+            {% endif %}
+        </form>
+        <form method="POST">
+            <input type="text" name="excluir_cpf" placeholder="cpf">
+            <button type="submit" name="click" value="Excluir">Excluir</button>
+            {% if p%}
+                <p>{{p}}</p>
+            {% endif %}
+        </form>
+        </main>
+        <h2>Dados dos Registros dos Livros</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cpf</th>
+                <th>Telefone</th>
+                <th>Livro</th>
+                <th>Rediramento</th>
+                <th>Devolução</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mostra in dados %}
+            <tr>
+                <td>{{ mostra[1] }}</td>
+                <td>{{ mostra[2] }}</td>
+                <td>{{ mostra[3] }}</td>
+                <td>{{ mostra[4] }}</td>
+                <td>{{ mostra[5] }}</td>
+                <td>{{ mostra[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

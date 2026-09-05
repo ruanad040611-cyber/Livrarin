@@ -1,0 +1,18 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: linear-gradient(to right, rgb(241, 240, 240), rgb(203, 203, 203));
+}
+form {
+    display: block;
+    background-color: whitesmoke;
+    width: 20%;
+    height: 30vw;
+    justify-self: center;
+    margin: 100px;
+    padding: 20px;
+    box-shadow: 0px 0px 40px black;
+}
+button {
+    margin-top: 10px;
+    cursor: pointer;
+}

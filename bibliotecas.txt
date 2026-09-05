@@ -1,0 +1,7 @@
+flask
+email.mine.txt
+sqlite3
+random
+smtplib
+os
+python-dotenv

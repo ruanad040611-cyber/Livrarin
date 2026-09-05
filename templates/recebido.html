@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livrarin | registro=código</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registro.css') }}">
+</head>
+<body>
+    <form method="POST">
+        <p>Insira o código recebido pelo email que vc insirio na página anterior</p>
+        <input type="text" name="entrada" placeholder="XXXXX">
+        <br>
+        <button type="submit">Enviar</button>
+        {% if p %}
+            <p>{{p}}</p>
+        {% endif %}
+    </form>
+</body>
+</html>

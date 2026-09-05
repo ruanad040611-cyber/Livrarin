@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livrarin | registro</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='registro.css' ) }}">
+</head>
+<body>
+    <form method="POST">
+        <p>Faça login para ir para acessar as tabelas</p>
+        <h2>Email:</h2>
+        <input type="text" name="email">
+        <button type="submit">Enviar formulário</button>
+        {% if p %}
+            <p>{{p}}</p>
+        {% endif %}
+    </form>
+</body>
+</html>
